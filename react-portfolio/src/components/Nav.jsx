@@ -1,7 +1,7 @@
 // import Link from react-router-dome to create navigable links
 import { Link } from 'react-router-dom';
 // import nav links
-import NavBar from '/UI/NavBar';
+import NavBar from './UI/NavBar';
 
 export default function Nav() {
     // NavBar component will render the links in the links prop
