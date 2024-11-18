@@ -1,9 +1,10 @@
 export default function Nav({ links }) {
     return (
-      <nav className="navbar navbar-expand">
-        <div className="container-fluid">
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-3 mt-3">
+      <nav className="navbar navbar-expand-lg nav-background">
+        <div className="container-fluid justify-content-between">
+          <div>Finola McBurnie</div>
+          <div className="navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-3">
               {links.map((link) => link)}
             </ul>
           </div>

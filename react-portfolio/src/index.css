@@ -24,8 +24,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -53,6 +52,14 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* background image for Nav section */
+.nav-background {
+  background-image: url('./utils/nav-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
