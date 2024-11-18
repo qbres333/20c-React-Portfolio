@@ -19,7 +19,7 @@ import Resume from "./pages/Resume";
 const router = createBrowserRouter([
   // define routes
   {
-    path: "/",
+    path: "/", 
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
