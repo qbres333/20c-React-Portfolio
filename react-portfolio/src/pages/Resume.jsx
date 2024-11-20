@@ -1,9 +1,9 @@
 export default function Resume() {
   return (
-    <div>
-      <h3 className="page-title">Resume</h3>
-      <div>
-        Download My
+    <div className="container container-fluid mt-3 pt-4">
+      <h3 className="page-title mb-3">Resume</h3>
+      <div className="mb-3">
+        Download my{" "}
         <a
           href="https://docs.google.com/document/d/1eSmIxfoAv8Nm1y0i3AVg-J2qmW9dFC5b/edit?usp=sharing&ouid=112703808131393472541&rtpof=true&sd=true"
           download="resume"
@@ -34,7 +34,6 @@ export default function Resume() {
           <li>MySQL, Sequelize</li>
           <li>MongoDB, Mongoose</li>
           <li>REST</li>
-          <li></li>
         </ul>
       </div>
     </div>

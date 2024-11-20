@@ -55,10 +55,40 @@ button:focus-visible {
 
 /* background image for Nav section */
 .nav-background {
-  background-image: url('./utils/nav-background.jpg');
+  background-image: url('./utils/images/nav-background.jpg');
   background-size: cover;
   background-position: center;
 }
+
+.projectGit {
+  background-image: url('./utils/images/gitHubFavicon.png');
+  background-size: auto;
+}
+
+.project-tile {}
+.nav-links {
+  /* color: black; */
+  font-size: 30px;
+}
+
+.full-name {
+  /* color: black; */
+  font-size: 50px;
+}
+
+.full-name,
+.nav-links {
+  font-weight: bolder;
+}
+
+.camera {
+  border-radius: 79px;
+}
+
+.projectURL {
+  font-size: 20px;
+}
+
 
 
 @media (prefers-color-scheme: light) {
