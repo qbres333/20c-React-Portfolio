@@ -1,12 +1,8 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
   line-height: 1.5;
   font-weight: 400;
-
-  /* color-scheme: light dark; */
-  /* color: rgba(255, 255, 255, 0.76); */
-  /* background-color: #242424; */
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,18 +18,16 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  
-  
+  margin: 0 0 10em 0;
+  height: 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
 /* style Outlet component */
 .app-body {
-
   background-color: rgb(224, 218, 218);
-  min-height: auto;
-  
+  min-height: calc(100vh );
+  overflow-y: auto;
 }
 
 h1 {
@@ -91,21 +85,24 @@ h1 {
 
 }
 
+/* lower opacity initially */
 .projectGit, .projectUrl {
   opacity: 0.5;
 }
-
+ /* change portfolio link opacity on hover */
 .projectGit:hover,
 .projectType:hover,
 .projectUrl:hover {
   opacity: 1;
 }
 
+/* align git icon with text */
 .projectGit {
   vertical-align: middle;
   
 }
 
+/* links default to blue, change to black on hover */
 .projectUrl:hover, .resume-link:hover {
   color: black;
 }
@@ -120,50 +117,76 @@ h1 {
   
 }
 
+/* hide project text initially */
 .tile-info {
   opacity: 1;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.1s ease-in-out;
 }
 
+/* display project text on hover */
 .project-tile:hover .tile-info {
   opacity: 1;
   transition: all 0.5s ease-in-out;
   visibility: visible;
 }
 
-
+/* display project flexibly */
 .project-tiles {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
+}
+
+/* bottom margin on outlet sections */
+.about-me, .project-tiles, .contact-form, .back-end {
+  margin-bottom: 10em;
 }
 
 .contact-form {
   padding: 25px;
   background-color: rgba(127, 157, 255, 0.164);
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .resume-list {
   font-size: 20px;
 }
+ footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: 10em;
+ }
 
 .footer {
   background-color: #bbada7;
   text-align: center;
-  /* freeze at the bottom of viewport */
-  position: relative;
-  bottom: 0;
-
+  padding: 0.7rem;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* style for mobile and smaller screens */
+@media (max-width: 1080px) {
+  h1 {
+      font-size: 2em;
   }
-  a:hover {
-    color: #747bff;
+  .nav-links {
+    font-size: 18px;
   }
-} */
+  .full-name {
+    font-size: 30px;
+  }
+  .projectUrl,
+  .resume-link,
+  .resume-download {
+    font-size: 12px;
+
+  }
+  .projectType {
+    font-size: 8px;
+  }
+  .resume-list {
+    font-size: 12px;
+  }
+  
+}

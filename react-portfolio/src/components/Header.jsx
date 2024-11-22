@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import NavBar from './UI/NavBar';
 
 export default function Nav() {
-    // NavBar component will render the links in the links prop
+    // NavBar component will render the links in Nav function
     return (
         <NavBar
             links={[

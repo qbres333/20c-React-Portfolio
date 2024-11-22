@@ -22,7 +22,7 @@ export default function Portfolio() {
     return (
       <div className="container container-fluid mt-5 mb-5">
         <h3 className="page-title"><b>Portfolio</b></h3>
-        <div className="project-tiles ">
+        <div className="project-tiles">
           {/* map over projects and render each as a tile */}
           {projects.map((project) => (
             <ProjectTile key={project.projectName} {...project} />

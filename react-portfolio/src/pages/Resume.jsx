@@ -15,8 +15,8 @@ export default function Resume() {
           resume
         </a>
       </div>
-      <div>
-        <h5>Front-end Proficiencies</h5>
+      <div className="front-end">
+        <h5><b>Front-end Proficiencies</b></h5>
         <ul className="resume-list">
           <li>HTML</li>
           <li>CSS</li>
@@ -28,8 +28,8 @@ export default function Resume() {
           <li>Progressive Web Apps</li>
         </ul>
       </div>
-      <div>
-        <h5>Back-end Proficiencies</h5>
+      <div className="back-end">
+        <h5><b>Back-end Proficiencies</b></h5>
         <ul className="resume-list">
           <li>APIs</li>
           <li>Node</li>

@@ -15,7 +15,7 @@ export default function ProjectTile(props) {
 
   return (
     <div
-      className="container-fluid m-3 p-4 project-tile"
+      className="container-fluid mt-5 mb-4 p-4 project-tile"
       style={styles.tileImage}
     >
       <div className="tile-info">

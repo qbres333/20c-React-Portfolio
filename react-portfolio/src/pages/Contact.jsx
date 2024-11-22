@@ -25,31 +25,56 @@ export default function Contact() {
       </h3>
       {/* React Forms docs */}
       <Form
-        novalidate
+        noValidate
         validated={validated}
         onSubmit={handleSubmit}
         className="col-6 form contact-form mt-4"
       >
-        <Form.Group className="form-group" controlId="validationCustom01">
-          <Form.Label><b>Name:</b></Form.Label>
+        <Form.Group
+          className="form-group"
+          // controlId="validationCustom01"
+          hasValidation
+        >
+          <Form.Label>
+            <b>Name:</b>
+          </Form.Label>
           <Form.Control required type="text" />
-          <Form.Control.Feedback type="invalid">Name is required</Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">
+            Name is required
+          </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group className="form-group mt-3" controlId="validationCustom02">
-          <Form.Label><b>Email Address:</b></Form.Label>
+        <Form.Group
+          className="form-group mt-3"
+          // controlId="validationCustom02"
+          hasValidation
+        >
+          <Form.Label>
+            <b>Email Address:</b>
+          </Form.Label>
           <Form.Control required type="email" />
-          <Form.Control.Feedback type="invalid">Email is invalid</Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">
+            Email is invalid
+          </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group className="form-group mt-3" controlId="validationCustom03">
-          <Form.Label><b>Message:</b></Form.Label>
-          <Form.Control required as="textarea" rows={5}/>
-          <Form.Control.Feedback type="invalid">Message is required</Form.Control.Feedback>
+        <Form.Group
+          className="form-group mt-3"
+          // controlId="validationCustom03"
+          hasValidation
+        >
+          <Form.Label>
+            <b>Message:</b>
+          </Form.Label>
+          <Form.Control required as="textarea" rows={5} />
+          <Form.Control.Feedback type="invalid">
+            Message is required
+          </Form.Control.Feedback>
         </Form.Group>
 
-        <Button type="submit" variant="secondary" className="col-12 mt-4">Submit</Button>
-
+        <Button type="submit" variant="secondary" className="col-12 mt-4">
+          Submit
+        </Button>
       </Form>
     </div>
   );
