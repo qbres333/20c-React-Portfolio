@@ -1,12 +1,13 @@
 // set params as project properties
 export default function ProjectTile(props) {
+  // mod 20 act 6
   const styles = {
     tileImage: {
       backgroundImage: `url(${props.tileBackground})`,
       backgroundPosition: "center",
       backgroundSize: "cover",
-      opacity: "0.7",
-      width: "240px",
+      // opacity: "0.1",
+      width: "260px",
       height: "180px"
 
     },
@@ -32,7 +33,7 @@ export default function ProjectTile(props) {
             >
             </img>
           </a>
-        </div>
+        </div><br/>
         <div className="projectType">
           <i>{props.projectType}</i>
         </div>
@@ -41,8 +42,3 @@ export default function ProjectTile(props) {
   );
 }
 
-//{props.tileBackground}
-// <Tile />
-// className={`${tileBackground}`}
-// {/* <img src={props.tileBackground} width={50}></img> */}
-// const tileBackground = `${props.tileBackground}`;

@@ -4,7 +4,7 @@ export default function Footer() {
         <a
           href="https://github.com/qbres333"
           target="_blank"
-          className="footer-git"
+          className="footer-link"
         >
           <img
             src="./src/utils/images/github-120.png"
@@ -15,7 +15,7 @@ export default function Footer() {
         <a
           href="https://www.linkedin.com/in/finola-mcburnie-a983a6aa/"
           target="_blank"
-          className="footer-git"
+          className="footer-link"
         >
           <img
             src="./src/utils/images/linkedin-144.png"
@@ -25,9 +25,9 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://github.com/qbres333"
+          href="https://www.instagram.com/finfin_mcb"
           target="_blank"
-          className="footer-git"
+          className="footer-link"
         >
           <img
             src="./src/utils/images/instagram-144.png"
