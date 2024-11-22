@@ -6,12 +6,12 @@ export default function ErrorPage() {
     console.error(error);
 
     return (
-        <div id="error-page">
-            <h1>Error!</h1>
-            <p>An unexpected error has occurred. Please try again later.</p>
-            <p>
-                <i>{error.statusText || error.message}</i>
-            </p>
-        </div>
-    )
+      <div id="error-page">
+        <h1>Error!</h1>
+        <p>An unexpected error has occurred. Please try again later.</p>
+        <p>
+          <i>{error.statusText || error.message}</i>
+        </p>
+      </div>
+    );
 }

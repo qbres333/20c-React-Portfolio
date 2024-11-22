@@ -1,8 +1,13 @@
 export default function AboutMe() {
   return (
-    <div className="container container-fluid mt-3 pt-4">
-      <h3 className="page-title mb-3">About Me</h3>
-      <img src="/src/utils/images/camera.jpg" alt="camera" width={160} className="camera mb-3"></img>
+    <div className="container container-fluid mt-5 mb-5">
+      <h3 className="page-title mb-3"><b>About Me</b></h3>
+      <img
+        src="/src/utils/images/camera.jpg"
+        alt="camera"
+        width={160}
+        className="camera mb-3"
+      ></img>
       <p className="bio-text">
         I'm an IT professional with a passion for both the human mind and the
         digital world. With degrees in psychology and accounting, I have

@@ -1,22 +1,48 @@
-// import Projects component
-// import React from "react";
-import projects from "../../utils/projectData";
+// set params as project properties
+export default function ProjectTile(props) {
+  const styles = {
+    tileImage: {
+      backgroundImage: `url(${props.tileBackground})`,
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      opacity: "0.7",
+      width: "240px",
+      height: "180px"
 
-export default function ProjectTile({ projectName, projectType, projectURL, projectGit }) {
+    },
+  };
+
   return (
-    <div className="container container-fluid mt-3 project-tile">
-      <div>
-        <a href={projectURL} target="_blank" className="projectUrl">
-          {projectName}
-        </a>
-        <a
-          href={projectGit}
-          target="_blank"
-          className="projectGit"
-        ></a>
+    <div
+      className="container-fluid m-3 p-4 project-tile"
+      style={styles.tileImage}
+    >
+      <div className="tile-info">
+        <div>
+          <a href={props.projectURL} target="_blank" className="projectUrl">
+            {props.projectName}
+          </a>
+          {"   "}
+          <a href={props.projectGit} target="_blank" className="projectGit">
+            {"   "}
+            <img
+              src="./src/utils/images/gitHubFavicon.png"
+              width={25}
+              className="gitIcon"
+            >
+            </img>
+          </a>
+        </div>
+        <div className="projectType">
+          <i>{props.projectType}</i>
+        </div>
       </div>
-      <div>{projectType}</div>
     </div>
   );
 }
 
+//{props.tileBackground}
+// <Tile />
+// className={`${tileBackground}`}
+// {/* <img src={props.tileBackground} width={50}></img> */}
+// const tileBackground = `${props.tileBackground}`;

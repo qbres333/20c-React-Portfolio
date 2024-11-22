@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.76); */
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,18 +15,25 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  /* color: #646cff; */
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: black;
 }
 
 body {
   margin: 0;
-  /* display: flex; */
-  min-width: 320px;
+  /* min-width: 100vw; */
   min-height: 100vh;
+  
+  
+}
+
+.app-body {
+  background-color: rgb(233, 233, 233);
+  height: 100vh;
+  /* height: calc(100vh - 200px); */
 }
 
 h1 {
@@ -34,7 +41,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -51,6 +58,14 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+
+
+.header {
+  /* freeze at the top of viewport */
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 /* background image for Nav section */
@@ -60,20 +75,15 @@ button:focus-visible {
   background-position: center;
 }
 
-.projectGit {
-  background-image: url('./utils/images/gitHubFavicon.png');
-  background-size: auto;
-}
-
-.project-tile {}
 .nav-links {
-  /* color: black; */
   font-size: 30px;
+  margin-right: 15px;
 }
 
 .full-name {
   /* color: black; */
-  font-size: 50px;
+  font-size: 45px;
+  margin-left: 15px;
 }
 
 .full-name,
@@ -85,11 +95,75 @@ button:focus-visible {
   border-radius: 79px;
 }
 
-.projectURL {
+.projectGit {
+  vertical-align: middle;
+  
+}
+
+.gitIcon, .github, .linkedin, .instagram {
+  vertical-align: top;
+  border-radius: 77px;
+}
+
+.github,
+.linkedin,
+.instagram {
+  vertical-align: middle;
+}
+
+.projectUrl, .resume-link, .resume-download {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+.projectUrl:hover, .resume-link:hover {
+  color: black;
+}
+
+.projectType {
+  font-size: 12px;
+}
+
+.project-tile {
+  border-radius: 10px;
+}
+
+.tile-info {
+  opacity: 0;
+  
+}
+
+.tile-info:hover {
+  opacity: 0.75;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-form {
+  padding: 25px;
+  background-color: rgba(127, 157, 255, 0.164);
+  border-radius: 10px;
+}
+
+.resume-list {
   font-size: 20px;
 }
 
-
+.footer {
+  background-color: #bbada7;
+  text-align: center;
+  /* freeze at the bottom of viewport */
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -99,7 +173,7 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
+  /* button {
     background-color: #f9f9f9;
-  }
+  } */
 }
