@@ -6,7 +6,6 @@ export default function ProjectTile(props) {
       backgroundImage: `url(${props.tileBackground})`,
       backgroundPosition: "center",
       backgroundSize: "cover",
-      // opacity: "0.1",
       width: "260px",
       height: "180px"
 

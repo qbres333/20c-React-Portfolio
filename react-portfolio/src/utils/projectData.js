@@ -5,6 +5,7 @@ const Projects = [
     projectURL: "https://one9c-pwa-text-editor.onrender.com/",
     projectGit: "https://github.com/qbres333/19c-PWA-Text-Editor",
     tileBackground: "./src/utils/images/tile-backgrounds/num1.png",
+    // tileBackground: "react-portfolio/src/utils/images/tile-backgrounds/num1.png"
   },
   {
     projectName: "Social Media API",

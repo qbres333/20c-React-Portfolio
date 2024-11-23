@@ -4,6 +4,8 @@ import ReactDOM from "react-dom/client";
 // import styling
 import './index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
+// import images
+import ImageGallery from './components/ImageGallery';
 
 // import React routing components
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
