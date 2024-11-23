@@ -30,7 +30,7 @@ As a former CPA and current NetSuite Administrator learning web development, I'v
 This app was built from scratch using Node, Express and the React Framework. To use the app locally, install Node.js to be used within your CLI. This portfolio app is also available at the Netflify link below.
 
 Netlify deployment:
-
+https://joyful-marzipan-ad3b73.netlify.app/
 
 GitHub Repository:
 https://github.com/qbres333/20c-React-Portfolio

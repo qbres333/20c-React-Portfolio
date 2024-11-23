@@ -1,3 +1,5 @@
+import camera from "../utils/images/camera.jpg"
+
 export default function AboutMe() {
   return (
     <div className="container container-fluid mt-5 mb-5">
@@ -5,7 +7,7 @@ export default function AboutMe() {
         <b>About Me</b>
       </h3>
       <img
-        src="/src/utils/images/camera.jpg"
+        src={camera}
         alt="camera"
         width={160}
         className="camera mb-4"

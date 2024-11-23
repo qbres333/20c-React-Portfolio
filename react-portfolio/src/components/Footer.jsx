@@ -1,3 +1,8 @@
+// import images
+import github from "../utils/images/github-120.png";
+import linkedin from "../utils/images/linkedin-144.png";
+import instagram from "../utils/images/instagram-144.png";
+
 export default function Footer() {
     return (
       <footer className="container-fluid footer">
@@ -7,7 +12,7 @@ export default function Footer() {
             className="footer-link"
           >
             <img
-              src="./src/utils/images/github-120.png"
+              src={github}
               width={55}
               className="github"
             ></img>
@@ -18,7 +23,7 @@ export default function Footer() {
             className="footer-link"
           >
             <img
-              src="./src/utils/images/linkedin-144.png"
+              src={linkedin}
               width={60}
               className="linkedin"
             ></img>
@@ -30,7 +35,7 @@ export default function Footer() {
             className="footer-link"
           >
             <img
-              src="./src/utils/images/instagram-144.png"
+              src={instagram}
               width={60}
               className="instagram"
             ></img>

@@ -1,3 +1,6 @@
+// Import images
+import gitfav from "../../utils/images/gitHubFavicon.png";
+
 // set params as project properties
 export default function ProjectTile(props) {
   // mod 20 act 6
@@ -7,8 +10,7 @@ export default function ProjectTile(props) {
       backgroundPosition: "center",
       backgroundSize: "cover",
       width: "260px",
-      height: "180px"
-
+      height: "180px",
     },
   };
 
@@ -26,13 +28,13 @@ export default function ProjectTile(props) {
           <a href={props.projectGit} target="_blank" className="projectGit">
             {"   "}
             <img
-              src="./src/utils/images/gitHubFavicon.png"
+              src={gitfav}
               width={25}
               className="gitIcon"
-            >
-            </img>
+            ></img>
           </a>
-        </div><br/>
+        </div>
+        <br />
         <div className="projectType">
           <i>{props.projectType}</i>
         </div>
@@ -40,4 +42,3 @@ export default function ProjectTile(props) {
     </div>
   );
 }
-

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ProjectTile from "../components/UI/ProjectTile";
 import Projects from "../utils/projectData";
 
+
 export default function Portfolio() {
   // set constants to store retrieved project data 
     const [projects, setProjects] = useState([]);
