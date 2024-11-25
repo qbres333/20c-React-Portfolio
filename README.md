@@ -70,6 +70,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_trans
 CSS Background-Image:
 https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
 
+Import Images in React:
+https://create-react-app.dev/docs/adding-images-fonts-and-files/
+
 ## License
 
 MIT License - see the LICENSE file for details.
