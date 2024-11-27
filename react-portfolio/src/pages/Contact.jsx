@@ -74,19 +74,14 @@ export default function Contact() {
             id="contact-email"
             value={formData.email}
             onChange={(event) => {
-              const email = event.target.value;
-              const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g; //https://regexr.com/3e48o
-
-              // Check for invalid format
-              const errorMessage = emailRegex.test(email)
-                ? ""
-                : "Email is required";
-              setEmailError(errorMessage);
               setFormData({ ...formData, email: event.target.value });
             }}
+            isInvalid={
+              formData.email && !/^([\w-\.]+@([\w-]+\.)+[a-zA-Z]{2,4})$/.test(formData.email)
+            }
           />
-          <Form.Control.Feedback type="invalid" value={setEmailError}>
-            Email is required
+          <Form.Control.Feedback type="invalid">
+            Invalid email
           </Form.Control.Feedback>
         </Form.Group>
 
