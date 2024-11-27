@@ -58,6 +58,9 @@ https://react-bootstrap.netlify.app/docs/forms/overview
 React Forms Validation:
 https://react-bootstrap.netlify.app/docs/forms/validation
 
+Using hooks with React Forms:
+https://dev.to/heyjoshlee/using-the-usestate-hook-and-working-with-forms-in-react-js-m6b
+
 React Bootstrap Installation:
 https://react-bootstrap.netlify.app/docs/getting-started/introduction/
 
@@ -72,6 +75,25 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
 
 Import Images in React:
 https://create-react-app.dev/docs/adding-images-fonts-and-files/
+
+NodeMailer (send emails from apps):
+https://www.nodemailer.com/
+https://www.npmjs.com/package/nodemailer
+
+SMTP setting for Outlook:
+https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040
+
+CORS:
+https://www.npmjs.com/package/cors
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
+CORS configuration:
+https://expressjs.com/en/resources/middleware/cors.html
+
+Regex Email Validation:
+https://regexr.com/3e48o
+
+
 
 ## License
 
