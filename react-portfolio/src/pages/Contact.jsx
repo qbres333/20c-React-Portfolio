@@ -3,20 +3,42 @@ import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
+
 export default function Contact() {
   // React form validation docs
   const [validated, setValidated] = useState(false);
+  // set initial state of email validation error
+  const [emailError, setEmailError] = useState('');
+  // set initial state of sent email message
+  const [successMessage, setSuccessMessage] = useState("");
+  // set initial state of contact form
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (event) => {
+  // add async await for form submission so email request is sent to the email server upon form submission (not earlier)
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+      return;
+    } else {
+
+      setValidated(true);
+      setSuccessMessage("Message sent successfully!");
+      // setFormData({
+      //   name: "",
+      //   email: "",
+      //   message: "",
+      // });
+
     }
 
-    setValidated(true);
-
-  }
+  };
 
   return (
     <div className="container container-fluid mt-5 mb-5">
@@ -32,13 +54,13 @@ export default function Contact() {
       >
         <Form.Group
           className="form-group"
-          // controlId="validationCustom01"
-          hasValidation
+          hasvalidation="true"
         >
-          <Form.Label>
+          <Form.Label htmlFor="contact-name">
             <b>Name:</b>
           </Form.Label>
-          <Form.Control required type="text" />
+          {/*dev.to docs; set field value as input using onChange function */}
+          <Form.Control required type="text" name="name" id="contact-name" value={formData.name} onChange={(event) => setFormData({...formData, name: event.target.value})} />
           <Form.Control.Feedback type="invalid">
             Name is required
           </Form.Control.Feedback>
@@ -46,36 +68,41 @@ export default function Contact() {
 
         <Form.Group
           className="form-group mt-3"
-          // controlId="validationCustom02"
-          hasValidation
+          hasvalidation="true"
         >
-          <Form.Label>
+          <Form.Label htmlFor="contact-email" >
             <b>Email Address:</b>
           </Form.Label>
-          <Form.Control required type="email" />
+          <Form.Control required type="email" name="email" id="contact-email" value={formData.email} onChange={(event) => {
+            const email = event.target.value;
+            const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g; //https://regexr.com/3e48o
+            setEmailError(emailRegex.test(email) ? '' : 'Email format is invalid')
+            setFormData({ ...formData, email: event.target.value });
+          }
+        } />
           <Form.Control.Feedback type="invalid">
-            Email is invalid
+            {emailError}
           </Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group
           className="form-group mt-3"
-          // controlId="validationCustom03"
-          hasValidation
+          hasvalidation="true"
         >
-          <Form.Label>
+          <Form.Label htmlFor="contact-message">
             <b>Message:</b>
           </Form.Label>
-          <Form.Control required as="textarea" rows={5} />
+          <Form.Control required as="textarea" rows={5} name="message" id="contact-message" value={formData.message} onChange={(event) => setFormData({...formData, message: event.target.value})} />
           <Form.Control.Feedback type="invalid">
             Message is required
           </Form.Control.Feedback>
         </Form.Group>
-
-        <Button type="submit" variant="secondary" className="col-12 mt-4">
+        {successMessage && <p>{successMessage}</p>}
+        <Button type="submit" variant="secondary" className="col-12 mt-4" id="submit-email" >
           Submit
         </Button>
       </Form>
     </div>
   );
 }
+
