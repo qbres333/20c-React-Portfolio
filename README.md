@@ -40,7 +40,7 @@ https://github.com/qbres333/20c-React-Portfolio
 To run the app locally, enter the following commands in your CLI:
     >> npm run build
     >> npm run start
-The link to the app will display as "http://localhost:5173/" in the CLI.
+The link to the app will display as "http://localhost:3000/" in the CLI.
 
 ![homepage](react-portfolio/src/utils/images/previews/homepage.png)
 ![portfolio page](react-portfolio/src/utils/images/previews/projects.png)
