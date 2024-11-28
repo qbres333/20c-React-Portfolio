@@ -18,12 +18,11 @@ export default function Contact() {
 
   // add async for form submission so email request is sent to the email server upon form submission (not earlier)
   const handleSubmit = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
-      event.preventDefault();
+      // event.preventDefault();
       event.stopPropagation();
-      // return;
     } else {
       alert("Message sent successfully!");
     }
